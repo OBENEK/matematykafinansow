@@ -1,0 +1,30 @@
+body {
+	background-image: linear-gradient(to bottom, #d16002, #420d09);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+#napistop {
+	font-family: arial;
+	margin: 30px;
+	border: 15px outset #ff4d00;
+	background-color: #ff6902;
+	border-radius: 67px;
+	text-align: center;
+}
+#sekcja {
+	background-color: #ffffff;
+	margin: 40px;
+	border-radius: 67px;
+	padding: 15px;
+	text-align: center;
+	font-family: arial;
+	margin-right: 200px;
+	margin-left: 200px;
+}
+#mid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
