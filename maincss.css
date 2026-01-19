@@ -19,12 +19,28 @@ body {
 	padding: 15px;
 	text-align: center;
 	font-family: arial;
-	margin-right: 200px;
-	margin-left: 200px;
+	margin-right: 100px;
+	margin-left: 100px;
 }
 #mid {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
+}
+<
+@media only screen and (max-width: 1200px) {
+	#napistop {border-radius: 60px; font-size: 15px}
+	#sekcja {margin-left: 40px; margin-right: 40px; font-size: 18px}
+	.button {font-size: 20px}
+}
+@media only screen and (max-width: 600px) {
+	#napistop {border-radius: 30px; font-size: 10px}
+	#sekcja {margin-left: 15px; margin-right: 15px; font-size: 12px}
+	.button {font-size: 15px}
+}
+@media only screen and (max-width: 300px) {
+	#napistop {border-radius: 5px; font-size: 10px}
+	#sekcja {margin-left: 5px; margin-right: 5px; font-size: 8px}
+	.button {font-size: 8px}
 }
