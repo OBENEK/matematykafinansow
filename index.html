@@ -1,95 +1,153 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta charset="UTF-8">
-   	<title>Matematyka - Strona Główna</title>
-	<style>
-		body {
-			background-image: linear-gradient(to bottom, #d16002, #420d09);
-		}
-		#napistop {
-			font-family: arial;
-			margin: 30px;
-			border: 15px outset #ff4d00;
-			background-color: #ff6902;
-			border-radius: 67px;
-			text-align: center;
-		}
-		#textmain {
-			margin: 50px;
-			background-image: url('kartka.png');
-			background-repeat: no-repeat
-			background-attachment: fixed;
-			background-size: 100% 100%;
-			padding: 15px;
-			margin-right: 100px;
-			margin-left: 100px;
-			text-align: center;
-			font-family: arial;
-		}
-		#inne {
-			margin: 40px;
-			opacity: 0.5;
-			border: 7px solid red;
-			background-color: #ffffff;
-			border-radius: 67px;
-			padding: 15px;
-			margin-right: 200px;
-			margin-left: 200px;
-			text-align: center;
-			font-family: arial;
-		}
-		#inne:hover {
-		opacity: 1;
-		}
-		#odno {
-			font-size: 10px;
-			font-family: arial;
-			text-align: center;
-		}
-		@media only screen and (max-width: 1200px) {
-			#napistop {border-radius: 40px; font-size: 15px}
-			#textmain {margin-left: 40px; margin-right: 40px; font-size: 10px}
-			#inne {border-radius: 50px; margin-left: 50px; margin-right: 50px; font-size: 15px}
-		}
-		@media only screen and (max-width: 600px) {
-			#napistop {border-radius: 20px; font-size: 10px}
-			#textmain {margin-left: 20px; margin-right: 20px; font-size: 7px}
-			#inne {border-radius: 20px; margin-left: 20px; margin-right: 20px; font-size: 8px}
-		}
-		@media only screen and (max-width: 300px) {
-			#napistop {border-radius: 20px; font-size: 7px}
-			#textmain {margin-left: 20px; margin-right: 20px; font-size: 5px}
-			#inne {border-radius: 15px; margin-left: 15px; margin-right: 15px; font-size: 5px}
-		}
-	</style>
-	</head>
-	<body>
-	<div id="napistop">
-		<h1><b>MATEMATYKA PIENIĘDZY I FINANSÓW</b></h1>
-	</div>
-	<div id="textmain">
-		<h2>W tym dokumencie została zawarta odpowiedź<br>na pytanie główne <b><i>Dlaczego pieniądze znikają?</i></b><br>Uwzględnione zostały również inne odpowiedzi na podobne pytania.
-	</div>
-	<div id="inne">
-		<h2><a href="link1.html">Wprowadzenie, podstawowe<br>pojęcia i kredyty</a></h2>
-	</div>
-	<div id="inne">
-		<h2><a href="link2.html">Raty, procent składany<br>oraz szybkie inwestycje</a></h2>
-	</div>
-	<div id="inne">
-		<h2><a href="link3.html">Inflacja, porównywanie<br>i symulacje</a></h2>
-	</div>
-	<div id="inne">
-		<h2><a href="link4.html">Błędy, ćwiczenia<br>oraz różne aspekty</a></h2>
-	</div>
-	<div id="inne">
-		<h2><a href="podsumowanie.html">PODSUMOWANIE</a></h2>
-	</div>
-	<div id="odno">
-		<a href="odnosniki.html">Źródła zdjęć</a>
-	</div>
-	</body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematyka Finansów - Bright Edition</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Jasne, pastelowe tło z przejściem niebiesko-fioletowym */
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 50%, #e0f2fe 100%);
+            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- Główny Biały Panel --- */
+        .main-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ffffff;
+            border-radius: 40px;
+            width: 100%;
+            max-width: 500px;
+            padding: 50px 40px;
+            /* Miękki, "napowietrzony" cień */
+            box-shadow: 0 20px 40px rgba(72, 52, 212, 0.08);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            /* Gradient na tekście (Niebieski -> Fioletowy) */
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        /* --- Lista Przycisków --- */
+        .button-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            background: #ffffff;
+            border: 2px solid #f1f5f9;
+            border-radius: 20px;
+            padding: 20px;
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Efekt najechania - Nowoczesne podświetlenie */
+        .btn:hover {
+            transform: translateY(-3px);
+            border-color: #c7d2fe;
+            color: #4f46e5;
+            background: #f8faff;
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.1);
+        }
+
+        /* Przycisk Podsumowania - Jasny i wyróżniony */
+        .btn-main {
+            background: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%);
+            border: none;
+            color: #ffffff;
+            margin-top: 10px;
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+        }
+
+        .btn-main:hover {
+            color: #000000;
+            filter: brightness(1.1);
+            box-shadow: 0 15px 30px rgba(79, 70, 229, 0.3);
+        }
+
+        /* --- Stopka --- */
+        footer {
+            margin-top: 30px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #4f46e5;
+        }
+
+        /* Responsywność */
+        @media (max-width: 450px) {
+            .main-card { padding: 35px 25px; }
+            header h1 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <header>
+            <h1>Matematyka Pieniędzy<br>i Finansów</h1>
+            <p class="subtitle">W tym dokumencie została zawarta odpowiedź<br>na pytanie główne <b><i>Dlaczego pieniądze znikają?</i></b><br>Uwzględnione zostały również inne odpowiedzi na podobne pytania.</p>
+        </header>
+
+        <nav class="button-stack">
+            <a href="link1.html" class="btn">Wprowadzenie, podstawowe<br>pojęcia i kredyty</a>
+            <a href="link2.html" class="btn">Raty, procent składany<br>oraz szybkie inwestycje</a>
+            <a href="link3.html" class="btn">Inflacja, porównywanie<br>i symulacje</a>
+            <a href="link4.html" class="btn">Błędy, ćwiczenia<br>oraz różne aspekty</a>
+            <a href="podsumowanie.html" class="btn btn-main">Podsumowanie</a>
+        </nav>
+
+        <footer>
+            <a href="odnosniki.html" class="footer-link">ŹRÓDŁA ZDJĘĆ</a>
+        </footer>
+    </div>
+
+</body>
+</html>
