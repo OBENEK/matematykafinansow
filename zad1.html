@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie: Raty 0% a Inflacja</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .formula-box {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .data-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .data-list li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .step {
+            margin-top: 25px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .result {
+            font-size: 1.2em;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Zadanie: "Raty 0% a inflacja"</h1>
+    <p>Chcesz kupić komputer, który kosztuje 20 000 zł. Masz dwie opcje:</p>
+    <p><strong>Opcja A:</strong> Płacisz 20 000 zł gotówką od razu.</p>
+    <p><strong>Opcja B:</strong> Bierzesz komputer na raty 0% rozłożone na 5 lat (jedna rata rocznie dla uproszczenia, czyli 4 000 zł co rok). Pieniądze, które masz (20 000 zł), wpłacasz na konto oszczędnościowe z oprocentowaniem 5% w skali roku (kapitalizacja roczna).</p>
+   
+    <p>Ile zyskasz (lub stracisz) wybierając raty 0% i trzymając pieniądze na koncie, zamiast płacić gotówką?</p>
+
+    <div class="formula-box">
+        Stosujemy wzór: \[ K_n = K \cdot \left(1 + \frac{p}{100 \cdot k}\right)^{n \cdot k} \]
+    </div>
+
+    <h2>Dane dla Opcji B:</h2>
+    <ul class="data-list">
+        <li>\( K \) (początkowa kwota na koncie): 20 000 zł</li>
+        <li>\( p \) (oprocentowanie konta): 5</li>
+        <li>\( n \) (liczba lat): 5</li>
+        <li>\( k \) (kapitalizacja roczna): 1</li>
+    </ul>
+
+    <div class="step">Krok 1: Obliczamy, ile pieniędzy wypracowałoby całe 20 000 zł przez 5 lat, gdybyś nie musiał płacić rat:</div>
+    <p style="text-align: center; font-size: 1.1em;">
+        \[ K_5 = 20\,000 \cdot \left(1 + \frac{5}{100 \cdot 1}\right)^{5 \cdot 1} \]
+        \[ K_5 = 20\,000 \cdot (1,05)^5 \approx \mathbf{25\,525,60 \text{ zł}} \]
+    </p>
+
+    <div class="step">Krok 2: Analiza zysku:</div>
+    <p>W Opcji A wydajesz 20 000 zł i masz 0 zł oszczędności. W Opcji B, mimo że ostatecznie oddasz bankowi te same 20 000 zł w ratach, Twoje pieniądze w międzyczasie pracują.</p>
+
+    <div class="footer">
+        <strong>Wniosek:</strong> Matematyczna korzyść z rat 0% polega na tym, że spłacasz kredyt pieniądzem, który z czasem traci na wartości (przez inflację), podczas gdy Twoje własne środki mogą w tym czasie zarabiać na odsetkach. W tym zadaniu Twój kapitał mógł urosnąć o ponad 5 500 zł odsetek (pomijając fakt, że saldo konta zmniejsza się z każdą spłaconą ratą).
+    </div>
+</div>
+
+</body>
+</html>
