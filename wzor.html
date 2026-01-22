@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procent składany i kapitalizacja odsetek</title>
+   
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   
+    <style>
+        body {
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .card {
+            background-color: #fcf6e9; /* Kremowe tło jak na zdjęciu */
+            padding: 50px 60px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 550px;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            color: #444;
+            font-weight: 800;
+        }
+
+        .formula {
+            font-size: 42px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .legend {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .legend-title {
+            margin-bottom: 10px;
+        }
+
+        .item {
+            margin-left: 35px;
+            margin-bottom: 6px;
+        }
+
+        .example {
+            margin-left: 70px;
+            color: #555;
+            font-style: italic;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* Stylizacja MathJax, aby pasowała do czcionki na zdjęciu */
+        .mjx-chtml {
+            font-family: 'Georgia', serif !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <header>
+        <h1>Procent składany</h1>
+        <h1>i kapitalizacja odsetek</h1>
+    </header>
+
+    <div class="formula">
+        \[ K_n = K \cdot \left( 1 + \frac{p}{100 \cdot k} \right)^{n \cdot k} \]
+    </div>
+
+    <div class="legend">
+        <div class="legend-title">gdzie:</div>
+       
+        <div class="item">\( K \) – kapitał początkowy</div>
+       
+        <div class="item">\( K_n \) – kapitał zgromadzony po \( n \) latach oszczędzania</div>
+       
+        <div class="item">\( n \) – liczba lat oszczędzania</div>
+       
+        <div class="item">\( p \) – oprocentowanie w skali roku</div>
+        <div class="example">(np. gdy mamy 3% w skali roku, to \( p = 3 \))</div>
+       
+        <div class="item">\( k \) – liczba kapitalizacji w ciągu roku</div>
+        <div class="example">(np. przy kapitalizacji miesięcznej mamy \( k = 12 \))</div>
+    </div>
+</div>
+
+</body>
+</html>
