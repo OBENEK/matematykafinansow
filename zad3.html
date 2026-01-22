@@ -39,6 +39,20 @@
             font-weight: bold;
             font-size: 1.1em;
         }
+        .button-back {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 18px 60px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +81,8 @@
         <h3>Ile będą warte Twoje pieniądze?</h3>
         <p>Wynik <span class="result">25 525,60 zł</span> to kwota, którą musiałbyś posiadać za 5 lat, aby kupić dokładnie to samo, co dziś kosztuje 20 000 zł.</p>
     </div>
-
+        <button onclick="history.go(-1)" class="button-back">
+            Powrót
+        </button>
 </body>
 </html>
