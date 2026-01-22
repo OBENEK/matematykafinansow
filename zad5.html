@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczenia Finansowe</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h2, h3 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .ans-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <p><strong>Zadanie:</strong> Oblicz zysk po 20 latach odkładając 2000 zł miesięcznie przy kapitale 8 000 zł i oprocentowaniu 5%.</p>
+       
+        <p>$$ K_n = K \cdot \left(1 + \frac{p}{100 \cdot k}\right)^{n \cdot k} $$</p>
+
+        <h3>Dane:</h3>
+        <ul>
+            <li>\( K \): 8 000 zł</li>
+            <li>\( n \): 20 lat</li>
+            <li>\( p \): 5</li>
+            <li>\( k \): 12 (kapitalizacja miesięczna)</li>
+        </ul>
+
+        <p><strong>Podstawienie:</strong> \( K_{20} = 8 000 \cdot \left(1 + \frac{5}{1200}\right)^{20 \cdot 12} \implies K_{20} = 8 000 \cdot (1,004167)^{240} \approx \mathbf{21\,701,15 \text{ zł}} \)</p>
+    </div>
+
+    <div class="section">
+        <h3>Część 2: Regularne dopłaty (2 000 zł miesięcznie)</h3>
+        <p>Tutaj stosujemy mechanizm renty płatnej z dołu (suma wszystkich wpłat z odsetkami). Wzór na ten element to:
+        $$ K_{\text{dopłaty}} = \text{Rata} \cdot \frac{(1+r)^m - 1}{r} $$
+        (gdzie \( r = \frac{p}{100 \cdot k} \), a \( m = n \cdot k \))</p>
+
+        <h3>Dane:</h3>
+        <ul>
+            <li><strong>Rata:</strong> 2 000 zł</li>
+            <li>\( r \): 0,004167 (procent miesięczny)</li>
+            <li>\( m \): 240 (miesięcy)</li>
+        </ul>
+
+        <p><strong>Obliczenia:</strong> \( K_{\text{dopłaty}} = 2 000 \cdot \frac{(1,004167)^{240} - 1}{0,004167} \implies K_{\text{dopłaty}} = 2 000 \cdot \frac{2,71264 - 1}{0,004167} \approx \mathbf{822\,060,33 \text{ zł}} \)</p>
+    </div>
+
+    <div class="section">
+        <h3>Część 3: Wynik końcowy i zysk</h3>
+        <ol>
+            <li><strong>Kapitał zgromadzony ogółem:</strong> \( 21\,701,15 \text{ zł} + 822\,060,33 \text{ zł} = \mathbf{843\,761,48 \text{ zł}} \)</li>
+            <li><strong>Suma Twoich wpłat:</strong> \( 8\,000 \text{ zł} + (20 \text{ lat} \cdot 12 \text{ miesięcy} \cdot 2\,000 \text{ zł}) = 8\,000 + 480\,000 = \mathbf{488\,000 \text{ zł}} \)</li>
+            <li><strong>Zysk (odsetki):</strong> \( 843\,761,48 \text{ zł} - 488\,000 \text{ zł} = \mathbf{355\,761,48 \text{ zł}} \)</li>
+        </ol>
+    </div>
+
+    <div class="ans-box">
+        <p><strong>Odpowiedź:</strong> Po 20 latach zgromadzisz łącznie <strong>843 761,48 zł</strong>. Twój czysty zysk z samych odsetek wyniesie <strong>355 761,48 zł</strong>.</p>
+    </div>
+
+</body>
+</html>
