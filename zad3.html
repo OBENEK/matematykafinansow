@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucieczka przed inflacją - Zadanie</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+        }
+        .task-box {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #000;
+        }
+        .math-block {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .step-list {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .step-list li {
+            margin-bottom: 10px;
+        }
+        .result {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-box">
+        <p><strong>Zadanie: "Ucieczka przed inflacją"</strong> Wyobraź sobie, że masz 20 000 zł (Twój kapitał początkowy). Postanawiasz trzymać te pieniądze w przysłowiowej "skarpecie" przez 5 lat. Średnioroczna inflacja w tym okresie wynosi 5%. Pytanie: Ile będą warte Twoje pieniądze po 5 latach?</p>
+
+        <h3>Podstawienie do wzoru:</h3>
+        <div class="math-block">
+            \[ K_n = K \cdot \left(1 + \frac{p}{100 \cdot k}\right)^{n \cdot k} \]
+        </div>
+
+        <h3>Podstawiamy nasze wartości:</h3>
+        <div class="math-block">
+            \[ K_5 = 20\,000 \cdot \left(1 + \frac{5}{100 \cdot 1}\right)^{5 \cdot 1} \]
+        </div>
+
+        <h3>Obliczenia krok po kroku:</h3>
+        <ol class="step-list">
+            <li><strong>Działanie w nawiasie:</strong> \( \frac{5}{100} = 0,05 \). Następnie \( 1 + 0,05 = \mathbf{1,05} \).</li>
+            <li><strong>Wykładnik potęgi:</strong> \( 5 \cdot 1 = \mathbf{5} \).</li>
+            <li><strong>Potęgowanie:</strong> \( 1,05^5 \approx \mathbf{1,27628} \).</li>
+            <li><strong>Mnożenie przez kapitał:</strong> \( 20\,000 \cdot 1,27628 = \mathbf{25\,525,60 \text{ zł}} \).</li>
+        </ol>
+
+        <h3>Ile będą warte Twoje pieniądze?</h3>
+        <p>Wynik <span class="result">25 525,60 zł</span> to kwota, którą musiałbyś posiadać za 5 lat, aby kupić dokładnie to samo, co dziś kosztuje 20 000 zł.</p>
+    </div>
+
+</body>
+</html>
