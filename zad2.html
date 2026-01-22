@@ -41,6 +41,20 @@
         b {
             color: #000;
         }
+        .button-back {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 18px 60px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +89,8 @@
         </li>
     </ol>
 </div>
-
+        <button onclick="history.go(-1)" class="button-back">
+            Powrót
+        </button>
 </body>
 </html>
