@@ -28,6 +28,20 @@
             padding: 15px;
             border-left: 5px solid #2c3e50;
         }
+        .button-back {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 18px 60px;
+            border-radius: 20px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +90,8 @@
     <div class="ans-box">
         <p><strong>Odpowiedź:</strong> Po 20 latach zgromadzisz łącznie <strong>843 761,48 zł</strong>. Twój czysty zysk z samych odsetek wyniesie <strong>355 761,48 zł</strong>.</p>
     </div>
-
+        <button onclick="history.go(-1)" class="button-back">
+            Powrót
+        </button>
 </body>
 </html>
